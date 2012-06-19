@@ -1,53 +1,56 @@
-# {{ project_name|title }} Django Project #
-## Prerequisites ##
+# Django skel 2
 
-- python >= 2.5
-- pip
-- virtualenv/wrapper (optional)
+## About ##
+This is a collection of useful templates for django-powered projects.
 
-## Installation ##
-### Creating the environment ###
-Create a virtual python enviroment for the project.
-If you're not using virtualenv or virtualenvwrapper you may skip this step.
+## How it works ##
+We have several branches and each one of them can be used as a template. Here they are:
 
-#### For virtualenvwrapper ####
+### simple template ###
+You'll get just a django project with some useful things such as:
+* nice settings.py (with PROJECT_DIR and some other stuff)
+* south
+* media, static, templates and fixtures directories (and settings.py knows them!)
+* default templates: base.html, 400.html, 500.html
+* readme template
+* /admin/ panel
+* chmoded manage.py
+* pythonic .gitignore
+* uwsgi.ini
+
+In order to use this template, you need to:
 ```bash
-mkvirtualenv {{ project_name }}-env
-```
-
-#### For virtualenv ####
-```bash
-virtualenv --no-site-packages {{ project_name }}-env
-cd {{ project_name }}-env
-source bin/activate
-```
-
-### Clone the code ###
-Obtain the url to your git repository.
-
-```bash
-git clone <URL_TO_GIT_RESPOSITORY> {{ project_name }}
-```
-
-### Install requirements ###
-```bash
-cd {{ project_name }}
-pip install -r requirements.txt
-```
-
-### Configure project ###
-```bash
-vi {{ project_name }}/settings_local.py
-```
-
-### Sync database ###
-```bash
+django-admin.py startproject --template https://github.com/nskeip/django-skel2/zipball/simple --extension py,md,ini YOUR_PROJECT_NAME
+cd YOUR_PROJECT_NAME
 python manage.py syncdb
 ```
 
-## Running ##
+### favs (favorites) template ###
+Favorite packages added to the simple template.
+You get (out of the box):
+* Admin tools
+* PIL
+* Sorl.thumbnails
+* simple captcha
+* pytils
+* pymorphy
+* Three types of requirements: requirements.txt (common case), requirements-dev.txt (requirements for development only), requirements-production.txt (requirements for production)
+
+In order to use this template, you need to:
 ```bash
-python manage.py runserver
+django-admin.py startproject --template https://github.com/nskeip/django-skel2/zipball/favs --extension py,md,ini YOUR_PROJECT_NAME
+cd YOUR_PROJECT_NAME
+python manage.py syncdb
+python manage.py migrate
 ```
 
-Open browser to http://127.0.0.1:8000
+### Django CMS template ###
+Django CMS added to Favorites template.
+
+Usage:
+```bash
+django-admin.py startproject --template https://github.com/nskeip/django-skel2/zipball/django-cms --extension py,md,ini YOUR_PROJECT_NAME
+cd YOUR_PROJECT_NAME
+python manage.py syncdb
+python manage.py migrate
+```
