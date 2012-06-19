@@ -32,6 +32,9 @@ nosetests.xml
 #Mr Developer
 .mr.developer.cfg
 
+# backup files
+*~
+
 # some common IDEs ignored
 *.swp
 .idea/
