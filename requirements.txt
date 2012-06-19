@@ -14,3 +14,6 @@ sorl-thumbnail==11.12
 # pytils
 # pymorphy
 
+# django-cms
+-e git+https://github.com/divio/django-cms/#egg=django-cms
+# django-mptt==0.5.1 # not later!
