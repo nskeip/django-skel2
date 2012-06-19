@@ -1,0 +1,47 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+#Translations
+*.mo
+
+#Mr Developer
+.mr.developer.cfg
+
+# some common IDEs ignored
+*.swp
+.idea/
+.buildpath
+.project
+.settings
+atlassian-ide-plugin.xml
+
+# some paths 
+settings_local.py
+public/static
+public/media
+
