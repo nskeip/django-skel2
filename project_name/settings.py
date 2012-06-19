@@ -118,6 +118,11 @@ FIXTURE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -129,6 +134,7 @@ INSTALLED_APPS = (
     # 'django.contrib.humanize',
 
     'south',
+    # 'sorl.thumbnail',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -160,7 +166,23 @@ LOGGING = {
     }
 }
 
+ADMIN_MEDIA_PREFIX = '/static/admin/'  # Soon will be deprecated
+ADMIN_TOOLS_THEMING_CSS = 'css/core-extended.css'
+
 try:
     from settings_local import *
 except ImportError:
     pass
+
+if DEBUG:
+    MIDDLEWARE_CLASSES += (
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+        )
+
+    INTERNAL_IPS = ('127.0.0.1',)
+
+    INSTALLED_APPS += ('debug_toolbar', )
+
+    DEBUG_TOOLBAR_CONFIG = {
+        'INTERCEPT_REDIRECTS': False,
+        }
