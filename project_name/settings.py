@@ -118,11 +118,6 @@ FIXTURE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'admin_tools',
-    'admin_tools.theming',
-    'admin_tools.menu',
-    'admin_tools.dashboard',
-
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -134,9 +129,6 @@ INSTALLED_APPS = (
     # 'django.contrib.humanize',
 
     'south',
-    # 'sorl.thumbnail',
-    # 'chunks',
-    # 'debug_toolbar',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -167,10 +159,6 @@ LOGGING = {
         },
     }
 }
-
-# Soon will be deprecated
-ADMIN_MEDIA_PREFIX = '/static/admin/'
-ADMIN_TOOLS_THEMING_CSS = 'css/core-extended.css'
 
 try:
     from settings_local import *
