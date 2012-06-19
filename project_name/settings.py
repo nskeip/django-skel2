@@ -1,3 +1,4 @@
+#-*- coding: UTF-8 -*-
 # Global settings for {{ project_name }} project.
 import os
 
