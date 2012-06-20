@@ -14,7 +14,6 @@ You'll get just a django project with some useful things such as:
 * default templates: base.html, 400.html, 500.html
 * readme template
 * /admin/ panel
-* chmoded manage.py
 * pythonic .gitignore
 * uwsgi.ini
 
@@ -40,6 +39,8 @@ In order to use this template, you need to:
 ```bash
 django-admin.py startproject --template https://github.com/nskeip/django-skel2/zipball/favs --extension py,md,ini YOUR_PROJECT_NAME
 cd YOUR_PROJECT_NAME
+pip install -r ./requirements.txt
+pip install -r ./requirements-dev.txt
 python manage.py syncdb
 python manage.py migrate
 ```
@@ -51,6 +52,8 @@ Usage:
 ```bash
 django-admin.py startproject --template https://github.com/nskeip/django-skel2/zipball/django-cms --extension py,md,ini YOUR_PROJECT_NAME
 cd YOUR_PROJECT_NAME
+pip install -r ./requirements.txt
+pip install -r ./requirements-dev.txt
 python manage.py syncdb
 python manage.py migrate
 ```
