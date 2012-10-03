@@ -1,7 +1,7 @@
 # Django skel 2
 
 ## About ##
-This is a collection of useful templates for django-powered projects.
+This is a collection of useful templates for django-powered projects. Inspired by [django-project-skel by @amccloud](https://github.com/amccloud/django-project-skel).
 
 ## How it works ##
 We have several branches and each one of them can be used as a template. Here they are:
